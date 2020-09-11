@@ -10,6 +10,16 @@ public class BookingDto {
 	private int tkts;
 	private String scheduleFlightId;
 	private String contactNo;
+	private List<Passenger> passengers = new ArrayList<>();
+	
+	
+	public BookingDto(int tkts, String scheduleFlightId, String contactNo, List<Passenger> passengers) {
+		super();
+		this.tkts = tkts;
+		this.scheduleFlightId = scheduleFlightId;
+		this.contactNo = contactNo;
+		this.passengers = passengers;
+	}
 	public int getTkts() {
 		return tkts;
 	}
@@ -35,5 +45,5 @@ public class BookingDto {
 	public void setPassengers(List<Passenger> passengers) {
 		this.passengers = passengers;
 	}
-	private List<Passenger> passengers = new ArrayList<>();
+	
 	}
